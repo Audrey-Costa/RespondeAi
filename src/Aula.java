@@ -1,7 +1,7 @@
 public class Aula {
   private String nomeDaAula;
   private double duracao;
-  private String[] respostas;
+  private String[] respostas = new String[20];
   
   public String getNomeDaAula() {
     return nomeDaAula;
@@ -27,8 +27,15 @@ public class Aula {
     return respostas;
   }
 
-  public void setRespostas(String[] respostas) {
-    this.respostas = respostas;
+  public void setRespostas(String resposta) {
+    System.out.println(resposta);
+    for (int i = 0; i < this.respostas.length; i++){
+      if (this.respostas[i] == null){
+        this.respostas[i] = resposta;
+        System.out.println(this.respostas[i]);
+        break;
+      }
+    }
   }
 
 }

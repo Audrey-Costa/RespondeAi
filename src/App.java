@@ -1,6 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         User user = new User();
+        Aula aula = new Aula();
 
         System.out.println(user.getNome());
         System.out.println(user.getEmail());
@@ -35,5 +36,19 @@ public class App {
         System.out.println(user.getAulasAssistidas());
 
         System.out.println(user.responder());
+
+        
+        System.out.println(aula.getNomeDaAula());
+        System.out.println(aula.getDuracao());
+        System.out.println(aula.getRespostas()[1]);
+
+        aula.setNomeDaAula("Iniciando em Java");
+        aula.setDuracao(20.17);
+        aula.setRespostas(user.responder());
+
+        
+        System.out.println(aula.getNomeDaAula());
+        System.out.println(aula.getDuracao());
+        System.out.println(aula.getRespostas()[1]);
     }
 }
